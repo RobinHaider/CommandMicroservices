@@ -15,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("InMemoryDb");
 });
 
+builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
