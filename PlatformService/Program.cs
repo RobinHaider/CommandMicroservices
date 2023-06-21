@@ -19,6 +19,9 @@ builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
 
 var app = builder.Build();
 
+// seed data
+PrepDb.SeedData(app);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
